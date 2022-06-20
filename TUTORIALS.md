@@ -27,6 +27,7 @@ roslaunch vrpn_client_ros sample.launch server:=192.168.1.2 # To establish the c
 ```powershell
 vrpn_print_devices <name2track>@<server_address>
 ```
+- Also if the Optitrack system doesn't see the robot it will not publish data, hence VRPN might not find the sender and tracker.
 
 # Connection from motive to central PC using Mocap_Optitrack:
 
