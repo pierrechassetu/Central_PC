@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 Python.h
 -
 stdbool.h
@@ -14,19 +14,19 @@ stdbool.h
 stdint.h
 -
 rosidl_runtime_c/visibility_control.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/visibility_control.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/visibility_control.h
 rosidl_runtime_c/message_type_support_struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/message_type_support_struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/message_type_support_struct.h
 rosidl_runtime_c/service_type_support_struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/service_type_support_struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/service_type_support_struct.h
 rosidl_runtime_c/action_type_support_struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/action_type_support_struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/rosidl_runtime_c/action_type_support_struct.h
 interfaces/srv/detail/task__type_support.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__type_support.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__type_support.h
 interfaces/srv/detail/task__struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__struct.h
 interfaces/srv/detail/task__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/interfaces/srv/detail/task__functions.h
 
 /home/sycamore/ros2_galactic/ros2-linux/include/geometry_msgs/msg/detail/point__struct.h
 stdbool.h

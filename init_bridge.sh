@@ -1,7 +1,10 @@
 #!/bin/bash
-
 source /opt/ros/noetic/setup.bash
-roscore &
-roslaunch vrpn_client_ros sample.launch server:=192.168.1.6 --wait &
+source /opt/ros/foxy/setup.bash
 
-xterm -title "BRIDGE" -e "source /opt/ros/noetic/setup.bash;. ~/ros2_galactic/ros2-linux/setup.bash;ros2 run ros1_bridge dynamic_bridge --wait" 
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export ROS_DISCOVERY_SERVER="192.168.1.5:11811"
+export ROS_IP=192.168.1.5
+export ROS_HOSTNAME=192.168.1.5
+export ROS_MASTER_URI=http://192.168.1.5:11311
+ros2 run ros1_bridge dynamic_bridge --bridge-all-1to2-topics

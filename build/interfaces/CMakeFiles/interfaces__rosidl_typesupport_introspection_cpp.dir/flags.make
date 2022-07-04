@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
 CXX_DEFINES = -DROS_PACKAGE_NAME=\"interfaces\" -Dinterfaces__rosidl_typesupport_introspection_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_cpp -isystem /home/sycamore/ros2_galactic/ros2-linux/include 
+CXX_INCLUDES = -I/home/sycamore/Central_PC/build/interfaces/rosidl_generator_cpp -isystem /home/sycamore/ros2_galactic/ros2-linux/include 
 

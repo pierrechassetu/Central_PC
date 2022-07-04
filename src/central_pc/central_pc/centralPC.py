@@ -5,43 +5,54 @@ import numpy as np
 from numpy.linalg import norm
 from scipy.optimize import linear_sum_assignment, minimize
 import math as m
+import time
 
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Point
 from std_msgs.msg import Bool
 from interfaces.srv import Task
 
-from central_pc.OptiTrack_sub import OptiTrackSubscriber
+from rclpy.qos import QoSProfile
+from rclpy.qos import QoSReliabilityPolicy
+from rclpy.qos import qos_profile_sensor_data
+
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 from central_pc.utils import generate_points, quat2eul
 
 DELTA = int(25*2*m.sqrt(2))+1 # r_jetbot_waveshare = 25 cm
 MAX_LIN_VEL = 1. # max linear velocity in m/s
-verbose = True
+verbose = False
 
 class centralPC(Node):
-    def __init__(self, n_SycaBot):
-        super().__init__('central', namespace = 'central_pc')
+    def __init__(self, n_SycaBot, ids):
+        super().__init__('central_pc')
         self.jb_positions = None
         self.goals = None
-        self.tasks = None
+        self.exec_state = Bool()
+        self.init = False
+        self.advertise = True
+        self.time_init = time.time()
+        
         self.n_sycabots = n_SycaBot
         self.OptiTrack_sub = []
-        self.init = False
+        
         self.id_jb_ready = []
-        self.exec_state = Bool()
+        self.accepted_id = ids
+        
+        qos = qos_profile_sensor_data
+        
         
         # Create multiple subscriber to Sycabot_Wx/pose topic and synchronize them
         for i in range(n_SycaBot):
             self.OptiTrack_sub.append(Subscriber(self, PoseStamped, "/vrpn_client_node/SycaBot_W" + str(i+1) +"/pose"))
-        self.ts = ApproximateTimeSynchronizer(self.OptiTrack_sub,queue_size=10, slop=0.1)
+        self.ts = ApproximateTimeSynchronizer(self.OptiTrack_sub, queue_size=10, slop = 0.1)
         self.ts.registerCallback(self.get_jb_pose_cb)
 
         # Create service for task request
         self.task_srv = self.create_service(Task, 'task_srv', self.set_task_cb)
-
+    
         # Create execution state topic
-        self.exec_state_pub = self.create_publisher(Bool, 'exec_state', 10)
+        self.exec_state_pub = self.create_publisher(Bool, 'exec_state', qos)
         self.timer = self.create_timer(0.5, self.set_execstate_cb)
     
     def get_jb_pose_cb(self, *poses):
@@ -53,7 +64,7 @@ class centralPC(Node):
         ------------------------------------------------
         return :
         '''
-        self.get_logger().info('gathering poses')
+        
         quat = [poses[0].pose.orientation.x, poses[0].pose.orientation.y, poses[0].pose.orientation.z, poses[0].pose.orientation.w]
         theta = quat2eul(quat)
         self.jb_positions = np.array([[poses[0].pose.position.x, poses[0].pose.position.y, theta]])
@@ -64,6 +75,12 @@ class centralPC(Node):
         if verbose :
             for pose in self.jb_positions[:]:
                 self.get_logger().info('pose : %f, %f, %f \n' % (pose[0], pose[1], pose[2]))
+        if self.advertise :
+                t = time.time()-self.time_init 
+                if t > 2 :
+                    self.advertise = False
+                self.get_logger().info('Well connected to motive. Stoping advertising in %f\n' %(2-t))
+
             
         return
     
@@ -78,14 +95,14 @@ class centralPC(Node):
             self.exec_state.data = True
         else :
             self.exec_state.data = False
-
+        if verbose : self.get_logger().info('publishing \n')
         self.exec_state_pub.publish(self.exec_state)
         return
 
 
     def set_task_cb(self, request, response):
         '''
-        Compute tasks if it has never been init and give it to the asking jetbot.
+        Compute goals if it has never been init and give it to the asking jetbot.
 
         arguments :
             request (interfaces.srv/Start.Response) =
@@ -95,13 +112,15 @@ class centralPC(Node):
             response (interfaces.srv/Task.Response) = 
                 task (geometry_msgs.msg/Pose) = pose of the assigned task
         '''
+        self.get_logger().info('Sending task to SycaBot_W%d\n' % (request.id))
         # Step 1 : if central has never initialised goals locations, do it
         if not self.init :
             self.init = True
             k = 20
             n_goals = 0
+            
             while n_goals < self.n_sycabots : # We always want more goals than jetbot for now
-                self.goals = generate_points(x_bound=400,y_bound=1000,r=DELTA, k=k)
+                self.goals = generate_points(x_bound=200,y_bound=400,r=DELTA, k=k)
                 n_goals = self.goals.shape[0]
                 k+=10
 
@@ -111,15 +130,23 @@ class centralPC(Node):
             self.goals = self.goals/100
             self.cCAPT(vmax = MAX_LIN_VEL, t0=0.)
 
-        # Step 2 : Compute and send response
+        # Step 2 : Compute and send response if id is the good one
         task = Point()
-        task.x = self.tasks[request.id-1][0]
-        task.y = self.tasks[request.id-1][1]
-        task.z = 0.
-        response.task = task
+        self.get_logger().info('got request from %d\n'%(request.id))
 
-        if request.id not in self.id_jb_ready : self.id_jb_ready.append(request.id)
-
+        if request.id in self.accepted_id :
+            task.x = self.goals[request.id-1][0] - 1
+            task.y = self.goals[request.id-1][1] - 2
+            # task.x = -1.5
+            # task.y = 1.5
+            task.z = 0.
+            response.task = task
+            if request.id not in self.id_jb_ready : self.id_jb_ready.append(request.id)
+        else :
+            task.x = 0.
+            task.y = 0.
+            task.z = 0.
+        self.get_logger().info('task is : [%f,%f]\n' % (task.x ,task.y))
         return response
 
 
@@ -150,8 +177,8 @@ class centralPC(Node):
         tf = round(max(norm(self.jb_positions[:,0:2] - self.goals[col_idx], axis=1))/vmax)
 
 
-        # Step 4 : Compute trajectory and the task where tasks[i] corresponds to jebtot[i]
-        self.tasks = phi@self.goals
+        # Step 4 : Compute trajectory and the task where goals[i] corresponds to jebtot[i]
+        self.goals = phi@self.goals
         # alpha0 = -t0/(tf-t0)
         # alpha1 = 1/(tf-t0)
         # traj = np.zeros((tf,N,2))
@@ -166,9 +193,13 @@ class centralPC(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    n_sycabots = int(input('number of Sycabots ?'))
+    ids = []
+    n_sycabots = int(input("Enter number of Sycabots : "))
+    
+    for i in range(0, n_sycabots):
+        ids.append(int(input("id n°%d : "%(i+1))))
 
-    central = centralPC(n_sycabots)
+    central = centralPC(n_sycabots, ids)
 
     rclpy.spin(central)
 

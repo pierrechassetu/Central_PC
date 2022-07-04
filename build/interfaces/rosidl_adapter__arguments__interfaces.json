@@ -1,6 +1,6 @@
 {
   "package_name": "interfaces",
   "non_idl_tuples": [
-    "/home/sycamore/Syca_ws/src/interfaces:srv/Task.srv"
+    "/home/sycamore/Central_PC/src/interfaces:srv/Task.srv"
   ]
 }

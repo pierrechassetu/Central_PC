@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/task__functions.c
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_c/interfaces/srv/detail/task__functions.c
 interfaces/srv/detail/task__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
 assert.h
 -
 stdbool.h
@@ -18,7 +18,7 @@ stdlib.h
 string.h
 -
 geometry_msgs/msg/detail/point__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__functions.h
 
 /home/sycamore/ros2_galactic/ros2-linux/include/geometry_msgs/msg/detail/point__functions.h
 stdbool.h

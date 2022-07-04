@@ -1,9 +1,9 @@
 {
   "package_name": "interfaces",
-  "output_dir": "/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces",
+  "output_dir": "/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces",
   "template_dir": "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces:srv/Task.idl"
+    "/home/sycamore/Central_PC/build/interfaces/rosidl_adapter/interfaces:srv/Task.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/Accel.idl",
@@ -82,7 +82,7 @@
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces/srv/Task.idl",
+    "/home/sycamore/Central_PC/build/interfaces/rosidl_adapter/interfaces/srv/Task.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/Accel.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/AccelStamped.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/AccelWithCovariance.idl",

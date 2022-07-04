@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sycamore/Syca_ws/src/interfaces
+CMAKE_SOURCE_DIR = /home/sycamore/Central_PC/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sycamore/Syca_ws/build/interfaces
+CMAKE_BINARY_DIR = /home/sycamore/Central_PC/build/interfaces
 
 # Utility rule file for interfaces__cpp.
 
@@ -136,8 +136,8 @@ rosidl_generator_cpp/interfaces/srv/task.hpp: /home/sycamore/ros2_galactic/ros2-
 rosidl_generator_cpp/interfaces/srv/task.hpp: /home/sycamore/ros2_galactic/ros2-linux/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/interfaces/srv/task.hpp: /home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/interfaces/srv/task.hpp: /home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sycamore/Syca_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/sycamore/Syca_ws/build/interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sycamore/Central_PC/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/sycamore/Central_PC/build/interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/interfaces/srv/detail/task__builder.hpp: rosidl_generator_cpp/interfaces/srv/task.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/task__builder.hpp
@@ -167,6 +167,6 @@ CMakeFiles/interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/interfaces__cpp.dir/clean
 
 CMakeFiles/interfaces__cpp.dir/depend:
-	cd /home/sycamore/Syca_ws/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sycamore/Syca_ws/src/interfaces /home/sycamore/Syca_ws/src/interfaces /home/sycamore/Syca_ws/build/interfaces /home/sycamore/Syca_ws/build/interfaces /home/sycamore/Syca_ws/build/interfaces/CMakeFiles/interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sycamore/Central_PC/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sycamore/Central_PC/src/interfaces /home/sycamore/Central_PC/src/interfaces /home/sycamore/Central_PC/build/interfaces /home/sycamore/Central_PC/build/interfaces /home/sycamore/Central_PC/build/interfaces/CMakeFiles/interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/interfaces__cpp.dir/depend
 

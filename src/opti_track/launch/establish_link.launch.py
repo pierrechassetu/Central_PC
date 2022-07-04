@@ -14,7 +14,7 @@ def generate_launch_description():
     for i in range(n_sycabots):
         description.append( Node(
             package= 'opti_track',
-            namespace= 'SycaBot_W' + str(i+1),
+            namespace= 'SycaLink_W' + str(i+1),
             executable= 'opti_link',
             remappings = [
                 ('/vrpn_client_node/SycaBot_W1/pose', '/vrpn_client_node/SycaBot_W'+ str(i+1)+'/pose')

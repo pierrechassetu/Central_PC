@@ -43,17 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sycamore/Syca_ws/src/interfaces
+CMAKE_SOURCE_DIR = /home/sycamore/Central_PC/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sycamore/Syca_ws/build/interfaces
+CMAKE_BINARY_DIR = /home/sycamore/Central_PC/build/interfaces
 
 # Utility rule file for interfaces.
 
 # Include the progress variables for this target.
 include CMakeFiles/interfaces.dir/progress.make
 
-CMakeFiles/interfaces: /home/sycamore/Syca_ws/src/interfaces/srv/Task.srv
+CMakeFiles/interfaces: /home/sycamore/Central_PC/src/interfaces/srv/Task.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/Task_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/Task_Response.msg
 CMakeFiles/interfaces: /home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/Accel.idl
@@ -102,6 +102,6 @@ CMakeFiles/interfaces.dir/clean:
 .PHONY : CMakeFiles/interfaces.dir/clean
 
 CMakeFiles/interfaces.dir/depend:
-	cd /home/sycamore/Syca_ws/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sycamore/Syca_ws/src/interfaces /home/sycamore/Syca_ws/src/interfaces /home/sycamore/Syca_ws/build/interfaces /home/sycamore/Syca_ws/build/interfaces /home/sycamore/Syca_ws/build/interfaces/CMakeFiles/interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sycamore/Central_PC/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sycamore/Central_PC/src/interfaces /home/sycamore/Central_PC/src/interfaces /home/sycamore/Central_PC/build/interfaces /home/sycamore/Central_PC/build/interfaces /home/sycamore/Central_PC/build/interfaces/CMakeFiles/interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/interfaces.dir/depend
 

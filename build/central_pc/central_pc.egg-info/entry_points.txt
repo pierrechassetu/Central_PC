@@ -1,3 +1,3 @@
 [console_scripts]
-centralPC = central_pc.centralPC:main
+start = central_pc.centralPC:main
 

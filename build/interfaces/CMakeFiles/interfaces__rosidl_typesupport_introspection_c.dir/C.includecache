@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/task__type_support.c
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/task__type_support.c
 stddef.h
 -
 interfaces/srv/detail/task__rosidl_typesupport_introspection_c.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__rosidl_typesupport_introspection_c.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__rosidl_typesupport_introspection_c.h
 interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
 rosidl_typesupport_introspection_c/field_types.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/field_types.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/field_types.h
 rosidl_typesupport_introspection_c/identifier.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/identifier.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/identifier.h
 rosidl_typesupport_introspection_c/message_introspection.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/message_introspection.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/message_introspection.h
 interfaces/srv/detail/task__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
 interfaces/srv/detail/task__struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/interfaces/srv/detail/task__struct.h
 geometry_msgs/msg/point.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/geometry_msgs/msg/point.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/geometry_msgs/msg/point.h
 geometry_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h
 rosidl_runtime_c/service_type_support_struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_runtime_c/service_type_support_struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_runtime_c/service_type_support_struct.h
 rosidl_typesupport_introspection_c/service_introspection.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/service_introspection.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/rosidl_typesupport_introspection_c/service_introspection.h
 
 /home/sycamore/ros2_galactic/ros2-linux/include/geometry_msgs/msg/detail/point__functions.h
 stdbool.h

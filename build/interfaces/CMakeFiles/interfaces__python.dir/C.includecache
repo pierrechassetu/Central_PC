@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_task_s.c
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/srv/_task_s.c
 Python.h
 -
 stdbool.h
 -
 numpy/ndarrayobject.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/srv/numpy/ndarrayobject.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/srv/numpy/ndarrayobject.h
 rosidl_runtime_c/visibility_control.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/srv/rosidl_runtime_c/visibility_control.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/srv/rosidl_runtime_c/visibility_control.h
 interfaces/srv/detail/task__struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/srv/interfaces/srv/detail/task__struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/srv/interfaces/srv/detail/task__struct.h
 interfaces/srv/detail/task__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_py/interfaces/srv/interfaces/srv/detail/task__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_generator_py/interfaces/srv/interfaces/srv/detail/task__functions.h
 
 /home/sycamore/ros2_galactic/ros2-linux/include/geometry_msgs/msg/detail/point__struct.h
 stdbool.h

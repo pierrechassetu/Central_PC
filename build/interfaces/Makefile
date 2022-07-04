@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sycamore/Syca_ws/src/interfaces
+CMAKE_SOURCE_DIR = /home/sycamore/Central_PC/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sycamore/Syca_ws/build/interfaces
+CMAKE_BINARY_DIR = /home/sycamore/Central_PC/build/interfaces
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sycamore/Syca_ws/build/interfaces/CMakeFiles /home/sycamore/Syca_ws/build/interfaces/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sycamore/Central_PC/build/interfaces/CMakeFiles /home/sycamore/Central_PC/build/interfaces/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sycamore/Syca_ws/build/interfaces/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sycamore/Central_PC/build/interfaces/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

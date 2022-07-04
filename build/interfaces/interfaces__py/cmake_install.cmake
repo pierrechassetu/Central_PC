@@ -1,8 +1,8 @@
-# Install script for directory: /home/sycamore/Syca_ws/build/interfaces/interfaces__py
+# Install script for directory: /home/sycamore/Central_PC/build/interfaces/interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sycamore/Syca_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sycamore/Central_PC/install/interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

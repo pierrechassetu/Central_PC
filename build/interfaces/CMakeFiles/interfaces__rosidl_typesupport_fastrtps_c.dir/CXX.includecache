@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/task__type_support_c.cpp
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/task__type_support_c.cpp
 interfaces/srv/detail/task__rosidl_typesupport_fastrtps_c.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_c.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_c.h
 cassert
 -
 limits
@@ -16,27 +16,27 @@ limits
 string
 -
 rosidl_typesupport_fastrtps_c/identifier.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_c/identifier.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_c/identifier.h
 rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
 rosidl_typesupport_fastrtps_cpp/message_type_support.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_cpp/message_type_support.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_cpp/message_type_support.h
 interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
 interfaces/srv/detail/task__struct.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__struct.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__struct.h
 interfaces/srv/detail/task__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/detail/task__functions.h
 fastcdr/Cdr.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/fastcdr/Cdr.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/fastcdr/Cdr.h
 geometry_msgs/msg/detail/point__functions.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__functions.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/geometry_msgs/msg/detail/point__functions.h
 rosidl_typesupport_fastrtps_cpp/service_type_support.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_cpp/service_type_support.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_fastrtps_cpp/service_type_support.h
 rosidl_typesupport_cpp/service_type_support.hpp
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_cpp/service_type_support.hpp
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/rosidl_typesupport_cpp/service_type_support.hpp
 interfaces/srv/task.h
-/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/task.h
+/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/interfaces/srv/task.h
 
 /home/sycamore/ros2_galactic/ros2-linux/include/fastcdr/Cdr.h
 fastcdr_dll.h

@@ -1,9 +1,9 @@
 {
   "package_name": "interfaces",
-  "output_dir": "/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces",
+  "output_dir": "/home/sycamore/Central_PC/build/interfaces/rosidl_typesupport_introspection_c/interfaces",
   "template_dir": "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_typesupport_introspection_c/resource",
   "idl_tuples": [
-    "/home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces:srv/Task.idl"
+    "/home/sycamore/Central_PC/build/interfaces/rosidl_adapter/interfaces:srv/Task.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/Accel.idl",
@@ -77,7 +77,7 @@
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
     "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
-    "/home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces/srv/Task.idl",
+    "/home/sycamore/Central_PC/build/interfaces/rosidl_adapter/interfaces/srv/Task.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/Accel.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/AccelStamped.idl",
     "/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/msg/AccelWithCovariance.idl",
