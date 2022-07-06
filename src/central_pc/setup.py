@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'start = central_pc.centralPC:main'
+            'start = central_pc.centralPC:main',
+            'test = central_pc.test:main',
         ],
     },
 )
