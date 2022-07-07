@@ -166,6 +166,7 @@ class centralPC(Node):
             task.z = 0.
             dmin = np.max(norm(self.jb_positions[:, 0:2] - self.goals[:], axis=1))
             vlin = norm(self.jb_positions[request.id-1, 0:2] - self.goals[request.id-1])*0.15/dmin
+            print(request.id-1, vlin)
             response.task = task
             response.vlin = vlin
             if request.id not in self.id_jb_ready : self.id_jb_ready.append(request.id)
