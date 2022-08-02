@@ -2,3 +2,5 @@
 /install
 /log
 /sdcard_ros2_copy.img.gz
+/sdcard_ros2_preinstalled.img.gz
+/data_files

@@ -47,17 +47,18 @@ roslaunch mocap_optitrack mocap.launch mocap_config_file:=<path_to_filename.yaml
 ## Example of a config.yaml file
 
 ```powershell
+############## Careful indentations should be 2 spaces for each and not indent ###############
 rigid_bodies:
-    ['1':
+    '1': # This is streaming id defined in Motive
         pose: RigidBody1Name/pose
         pose2d: RigidBodyName/ground_pose
         child_frame_id: RigidBodyName/base_link
-        parent_frame_id: world]
-    ['2':
+        parent_frame_id: world
+    '2':
         pose: RigidBody2Name/pose
         pose2d: RigidBody2Name/ground_pose
         child_frame_id: RigidBody2Name/base_link
-        parent_frame_id: world]
+        parent_frame_id: world
 		
 optitrack_config:
         multicast_address: 224.0.0.1 #Should be the same as the one in Motive

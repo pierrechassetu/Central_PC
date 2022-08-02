@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'utilities'
+package_name = 'beacon'
 
 setup(
     name=package_name,
@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'identification = utilities.identification:main'
+            'start = beacon.beacon:main'
         ],
     },
 )

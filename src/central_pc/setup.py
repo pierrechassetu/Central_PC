@@ -22,6 +22,10 @@ setup(
         'console_scripts': [
             'start = central_pc.centralPC:main',
             'test = central_pc.test:main',
+            'deadzones_id = central_pc.DeadzoneActionClient:main',
+            'identification = central_pc.IdentificationActionClient:main',
+            'control = central_pc.ControlActionClient:main',
+            'gamepad = central_pc.GamepadActionServer:main',
         ],
     },
 )
