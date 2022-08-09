@@ -14,18 +14,17 @@ class DeadzoneActionClient(Node):
     def __init__(self):
         super().__init__('control_action_client')
 
-        self.declare_parameter('SycaBot_id', 2)
+        self.declare_parameter('SycaBot_id', 1)
 
         self.Sycabot_id = self.get_parameter('SycaBot_id').value
         
-        self._action_client = ActionClient(self, Control, f'/SycaBot_W{self.Sycabot_id}/start_control')
+        self._action_client = ActionClient(self, Control, f'/SycaBot_W{self.Sycabot_id}/MPC_start_control')
 
     def send_goal(self, order):
         goal_msg = Control.Goal()
         self._action_client.wait_for_server()
 
-        poses = self.create_circle_trajectory(1,200)
-        random.shuffle(poses)
+        poses = self.create_tajectory_randpoints()
         goal_msg.path = poses
         self._send_goal_future = self._action_client.send_goal_async(goal_msg)
         self._send_goal_future.add_done_callback(self.goal_response_callback)
@@ -48,7 +47,7 @@ class DeadzoneActionClient(Node):
     
     def create_tajectory_randpoints(self):
         poses = []
-        points = [[-1.352, -0.840], [-0.088,1.409],[1.306,-0.948],[0.869,2.150],[-1.155,2.208],[-0.067,-1.547],[0.,0.],[0.,0.4],[0.3,0.]]
+        points = [[0.,0.],[-1.352, -0.840], [-0.088,1.409],[1.306,-0.948],[0.869,2.150],[-1.155,2.208],[-0.067,-1.547],[0.,-0.4],[0.3,0.],[0.,0.]]
         for p in points :
             pose = Pose2D()
             pose.x = p[0]
@@ -59,20 +58,24 @@ class DeadzoneActionClient(Node):
     def create_square_trajectory(self):
         poses = []
         pose = Pose2D()
-        pose.x = 1.5
-        pose.y = 1.5
+        pose.x = 1.
+        pose.y = 1.
         poses.append(pose)
         pose = Pose2D()
-        pose.x = -1.5
-        pose.y = 1.5
+        pose.x = -1.
+        pose.y = 1.
         poses.append(pose)
         pose = Pose2D()
-        pose.x = -1.5
-        pose.y = -1.5
+        pose.x = -1.
+        pose.y = -1.
         poses.append(pose)
         pose = Pose2D()
-        pose.x = 1.5
-        pose.y = -1.5
+        pose.x = 1.
+        pose.y = -1.
+        poses.append(pose)
+        pose = Pose2D()
+        pose.x = 1.
+        pose.y = 1.
         poses.append(pose)
         return poses
     
